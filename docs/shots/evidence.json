@@ -1,0 +1,209 @@
+{
+  "base_url": "http://localhost:3002",
+  "engine": "demo",
+  "model": "demo-extractive",
+  "documents": 5,
+  "document_names": [
+    "refund-policy.md",
+    "shipping.md",
+    "plans-and-pricing.md",
+    "troubleshooting.md",
+    "SECURITY-NOTICE-INTERNAL.md"
+  ],
+  "chunks": 5,
+  "store_kind": "demo",
+  "runs": [
+    {
+      "question": "What is the refund window?",
+      "elapsed_s": 0.0482,
+      "answer": "Northwind issues full refunds within 30 days of purchase. After 30 days we can offer\nstore credit only, and the credit never expires. To request a refund, email [EMAIL REDACTED] with your invoice number.\nSources: [1]",
+      "citations": [
+        {
+          "docId": "3d4f72e19aaef4dd",
+          "docName": "refund-policy.md",
+          "chunkId": "3d4f72e19aaef4dd:0",
+          "index": 1,
+          "preview": "# Refund Policy\nNorthwind issues full refunds within 30 days of purchase. After 30 days we can offer\nstore credit only, and the credit never expires.\nTo request a refund, email [EMAIL REDACTED] with y"
+        }
+      ],
+      "grounded": true,
+      "usage": {
+        "promptTokens": 660,
+        "completionTokens": 0,
+        "costUsd": 0,
+        "model": "demo-extractive",
+        "engine": "demo"
+      },
+      "engine": "demo",
+      "model": "demo-extractive",
+      "seeded": {
+        "seeded": 0,
+        "docs": [
+          {
+            "id": "3d4f72e19aaef4dd",
+            "name": "refund-policy.md",
+            "mimeType": "text/markdown",
+            "byteSize": 495,
+            "charCount": 495,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.912Z",
+            "quarantined": false
+          },
+          {
+            "id": "ef687809ce185651",
+            "name": "shipping.md",
+            "mimeType": "text/markdown",
+            "byteSize": 378,
+            "charCount": 378,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.918Z",
+            "quarantined": false
+          },
+          {
+            "id": "ef8d6295abf925c8",
+            "name": "plans-and-pricing.md",
+            "mimeType": "text/markdown",
+            "byteSize": 447,
+            "charCount": 447,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.922Z",
+            "quarantined": false
+          },
+          {
+            "id": "1097972aedf380e4",
+            "name": "troubleshooting.md",
+            "mimeType": "text/markdown",
+            "byteSize": 496,
+            "charCount": 496,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.927Z",
+            "quarantined": false
+          },
+          {
+            "id": "4b5728e2f295932d",
+            "name": "SECURITY-NOTICE-INTERNAL.md",
+            "mimeType": "text/markdown",
+            "byteSize": 423,
+            "charCount": 423,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.931Z",
+            "quarantined": true
+          }
+        ]
+      }
+    },
+    {
+      "question": "How much is express shipping?",
+      "elapsed_s": 0.0277,
+      "answer": "Standard shipping is free on orders over 500 EGP and takes 2-4 business days inside\nCairo, 4-7 business days elsewhere in Egypt. Express shipping costs 60 EGP and arrives next business day in Cairo only. Orders placed after 3pm ship the next business day.\nSources: [1]",
+      "citations": [
+        {
+          "docId": "ef687809ce185651",
+          "docName": "shipping.md",
+          "chunkId": "ef687809ce185651:0",
+          "index": 1,
+          "preview": "# Shipping\nStandard shipping is free on orders over 500 EGP and takes 2-4 business days inside\nCairo, 4-7 business days elsewhere in Egypt.\nExpress shipping costs 60 EGP and arrives next business day "
+        }
+      ],
+      "grounded": true,
+      "usage": {
+        "promptTokens": 661,
+        "completionTokens": 0,
+        "costUsd": 0,
+        "model": "demo-extractive",
+        "engine": "demo"
+      },
+      "engine": "demo",
+      "model": "demo-extractive",
+      "seeded": {
+        "seeded": 0,
+        "docs": [
+          {
+            "id": "3d4f72e19aaef4dd",
+            "name": "refund-policy.md",
+            "mimeType": "text/markdown",
+            "byteSize": 495,
+            "charCount": 495,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.912Z",
+            "quarantined": false
+          },
+          {
+            "id": "ef687809ce185651",
+            "name": "shipping.md",
+            "mimeType": "text/markdown",
+            "byteSize": 378,
+            "charCount": 378,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.918Z",
+            "quarantined": false
+          },
+          {
+            "id": "ef8d6295abf925c8",
+            "name": "plans-and-pricing.md",
+            "mimeType": "text/markdown",
+            "byteSize": 447,
+            "charCount": 447,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.922Z",
+            "quarantined": false
+          },
+          {
+            "id": "1097972aedf380e4",
+            "name": "troubleshooting.md",
+            "mimeType": "text/markdown",
+            "byteSize": 496,
+            "charCount": 496,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.927Z",
+            "quarantined": false
+          },
+          {
+            "id": "4b5728e2f295932d",
+            "name": "SECURITY-NOTICE-INTERNAL.md",
+            "mimeType": "text/markdown",
+            "byteSize": 423,
+            "charCount": 423,
+            "chunkCount": 1,
+            "createdAt": "2026-10-23T12:00:22.931Z",
+            "quarantined": true
+          }
+        ]
+      }
+    },
+    {
+      "question": "Who won the 1998 World Cup?",
+      "elapsed_s": 0.0226,
+      "answer": "I don't have that information in the documents I can see. I'd rather tell you I don't know than guess — a teammate can pick this up if you reply with “escalate”.",
+      "citations": [],
+      "grounded": false,
+      "reason": "low_similarity",
+      "usage": {
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "costUsd": 0,
+        "model": "none",
+        "engine": "refused"
+      },
+      "suggestion": "Try asking about refunds, shipping, plans or troubleshooting."
+    }
+  ],
+  "log_summary": {
+    "conversations": 34,
+    "totalPromptTokens": 13205,
+    "totalCompletionTokens": 0,
+    "totalCostUsd": 0,
+    "byEngine": {
+      "refused": {
+        "conversations": 14,
+        "costUsd": 0,
+        "tokens": 0
+      },
+      "demo": {
+        "conversations": 20,
+        "costUsd": 0,
+        "tokens": 13205
+      }
+    }
+  }
+}

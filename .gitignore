@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# never commit real secrets
+.env
+.env.local
+.env.*.local
+
+# demo local document store
+.data/
+
+# python build artefacts from the screenshot/QA scripts
+__pycache__/
+*.pyc
