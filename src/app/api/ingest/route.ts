@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
 /**
  * The one place a document becomes answerable.
@@ -11,6 +11,7 @@ import { chunkDocument } from "@/lib/rag";
 import { ingestDoc, getStore } from "@/lib/store";
 import { installProviders } from "@/lib/llm";
 import { isQuarantined } from "@/lib/guardrails";
+import { requireAdmin } from "@/lib/admin-auth";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -18,7 +19,9 @@ export const maxDuration = 60;
 const MAX_BYTES = 5 * 1024 * 1024; // 5 MB — a support doc is never larger than this
 const ALLOWED_EXTENSIONS = new Set(["txt", "md", "markdown", "pdf"]);
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
+  const denied = requireAdmin(request);
+  if (!denied.ok) return denied.response;
   try {
     await installProviders();
 
@@ -117,7 +120,9 @@ function scanPdfStreams(buffer: Buffer): string {
   return runs.join("\n").trim();
 }
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const denied = requireAdmin(request);
+  if (!denied.ok) return denied.response;
   await installProviders();
   const docs = await getStore().listDocs();
   return NextResponse.json({ docs, kind: getStore().kind });
