@@ -203,14 +203,18 @@ ranking, and Arabic-language matching.
 
 ## Deployment
 
-Any Node.js host. Vercel is the zero-config option:
+Hosted on Railway, wired to this repository — every push to `main` builds and deploys
+automatically. URL, environment variables and the persistent volume are documented in
+[`docs/DEPLOY.md`](docs/DEPLOY.md).
 
 ```bash
-pnpm build
+git push origin main    # that's the deploy
 ```
 
-Set the environment variables in your host's dashboard. **Set `ADMIN_PASSWORD`** before the
-URL is reachable from the internet.
+**Set `ADMIN_PASSWORD`** in the host's dashboard before the URL is reachable from the
+internet. `/admin` and the admin APIs (ingest, delete, logs) are gated behind it; the
+chat itself stays public. Until a password is set, local hosts stay open so `pnpm dev`
+works and any public host refuses the admin surface.
 
 ---
 
